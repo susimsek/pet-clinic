@@ -1,13 +1,25 @@
 package com.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "t_pet")
 public class Pet {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "petClinicSeqGen")
+    @SequenceGenerator(name = "petClinicSeqGen",sequenceName = "petclinic_sequence")
     private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "birth_date")
     private Date birthDate;
 
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
 
     public Long getId() {
