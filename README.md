@@ -4,6 +4,7 @@
 - Java 8
 - Spring Boot
 - Spring MVC
+- Spring Security
 - Spring Data JPA
 - H2 Embedded Database
 - Thymeleaf
