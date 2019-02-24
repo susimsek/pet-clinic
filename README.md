@@ -10,8 +10,7 @@
 - Thymeleaf
 - Spring Boot Hateoas
 - Maven
-- Hamcrest
-- JUnit
+- Spring Boot Test
 - Spring Dev Tools
 - Spring Actuator
 
