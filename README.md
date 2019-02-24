@@ -11,6 +11,7 @@
 - Spring Boot Hateoas
 - Maven
 - Spring Boot Test
+- Spring Security Test
 - Spring Dev Tools
 - Spring Actuator
 
