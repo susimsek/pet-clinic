@@ -9,8 +9,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/**/favicon.ico","/css/**","/js/**","/images/**","/webjars/**").permitAll();//bu isteklerde authenticate yok
+        http.authorizeRequests().antMatchers("/**/favicon.ico","/css/**","/js/**","/images/**","/webjars/**","/login.html").permitAll();//bu isteklerde authenticate yok
         http.authorizeRequests().anyRequest().authenticated();//her isteği güvenli hale getirir
-        http.formLogin();//default form sayfası açar
+       // http.formLogin();//default form sayfası açar
+        http.formLogin().loginPage("/login.html").loginProcessingUrl("/login")
+                .failureUrl("/login.html?loginFailed=true");
     }
 }
