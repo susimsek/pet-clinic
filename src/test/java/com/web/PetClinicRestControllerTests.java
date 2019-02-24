@@ -25,7 +25,7 @@ public class PetClinicRestControllerTests {
     @Before
     public void setUp(){
         restTemplate=new RestTemplate();
-        BasicAuthorizationInterceptor basicAuthorizationInterceptor=new BasicAuthorizationInterceptor("user","secret");
+        BasicAuthorizationInterceptor basicAuthorizationInterceptor=new BasicAuthorizationInterceptor("user","secret");//Otomatik base64 encode yapıyor.
         restTemplate.setInterceptors(Arrays.asList(basicAuthorizationInterceptor));
     }
 
