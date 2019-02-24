@@ -5,6 +5,7 @@ import com.dao.PetRepository;
 import com.exception.OwnerNotFoundException;
 import com.model.Owner;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,6 +31,7 @@ public class PetClinicServiceImpl implements PetClinicService {
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS,readOnly = true)
+    @Secured(value = {"ROLE_USER","ROLE_EDITOR"})
     public List<Owner> findOwners() {
         return ownerRepository.findAll();
     }
