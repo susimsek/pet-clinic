@@ -4,9 +4,12 @@ import com.model.Owner;
 import com.service.PetClinicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.validation.Valid;
 
 @Controller
 public class PetClinicNewOwnerController {
@@ -26,7 +29,10 @@ public class PetClinicNewOwnerController {
     }
 
     @RequestMapping(method = RequestMethod.POST ,value = "/owners/new")
-    public String handleFormSubmit(@ModelAttribute Owner owner){
+    public String handleFormSubmit(@ModelAttribute @Valid Owner owner, BindingResult bindingResult){
+       if(bindingResult.hasErrors()){
+           return "newOwner";
+       }
         petClinicService.createOwner(owner);
         return "redirect:/owners";
     }

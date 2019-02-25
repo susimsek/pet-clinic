@@ -14,8 +14,12 @@
 <body>
 <%--@elvariable id="owner" type=""--%>
 <form:form modelAttribute="owner" method="post">
-    Fist Name :<form:input path="firstName"/><br/>
-    Last Name :<form:input path="lastName"/><br/>
+    Fist Name :<form:input path="firstName"/>
+    <form:errors path="firstName" cssStyle="color: red"></form:errors>
+    <br/>
+    Last Name :<form:input path="lastName"/>
+    <form:errors path="lastName" cssStyle="color: red"></form:errors>
+    <br/>
     <form:button name="submit">Update</form:button>
 </form:form>
 

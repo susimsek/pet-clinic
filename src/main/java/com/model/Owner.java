@@ -3,6 +3,7 @@ package com.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.HashSet;
@@ -18,9 +19,11 @@ public class Owner {
     @SequenceGenerator(name = "petClinicSeqGen",sequenceName = "petclinic_sequence")
     private Long id;
 
+    @NotEmpty
     @Column(name = "first_name")
     private String firstName;
 
+    @NotEmpty
     @Column(name = "last_name")
     private String lastName;
 
