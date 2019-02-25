@@ -16,7 +16,7 @@
 <form:form modelAttribute="owner" method="post">
     Fist Name :<form:input path="firstName"/><br/>
     Last Name :<form:input path="lastName"/><br/>
-    <form:button name="submit">Create</form:button>
+    <form:button name="submit">Update</form:button>
 </form:form>
 
 </body>
