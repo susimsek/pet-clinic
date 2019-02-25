@@ -29,6 +29,12 @@
     </c:forEach>
 </table>
 
+<c:if test="${not empty message}">
+    <div style="color: blue">
+        ${message}
+    </div>
+</c:if>
+
 
 </body>
 </html>
