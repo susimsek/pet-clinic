@@ -16,7 +16,7 @@ public class PetClinicNewOwnerController {
 
     @RequestMapping(method = RequestMethod.GET ,value = "/owners/new")
     public String newOwner(){
-        return "editOwner";
+        return "newOwner";
 
     }
 
