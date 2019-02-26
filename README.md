@@ -6,6 +6,8 @@
 - Spring MVC
 - Spring Security
 - Spring Data JPA
+- Spring Boot Data Rest
+- Spring Boot Data Rest Hal Browser
 - Spring Boot Mail
 - H2 Embedded Database
 - Thymeleaf

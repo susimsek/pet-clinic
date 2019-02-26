@@ -14,7 +14,6 @@ import java.util.Set;
 @XmlRootElement
 public class Owner extends BaseEntity {
 
-
     @NotEmpty
     @Column(name = "first_name")
     private String firstName;
