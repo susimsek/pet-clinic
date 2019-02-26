@@ -1,6 +1,7 @@
 package com;
 
 import com.model.Owner;
+import com.model.Vet;
 import com.service.PetClinicService;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
@@ -38,5 +39,11 @@ public class PetClinicIntegrationTest {
     public void testFindOwners(){
        List<Owner> owners=petClinicService.findOwners();
         MatcherAssert.assertThat(owners.size(), Matchers.equalTo(10));
+    }
+
+    @Test
+    public void testFindVets(){
+        List<Vet> vets=petClinicService.findVets();
+        MatcherAssert.assertThat(vets.size(), Matchers.equalTo(3));
     }
 }

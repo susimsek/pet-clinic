@@ -2,8 +2,11 @@ package com.service;
 
 import com.dao.OwnerRepository;
 import com.dao.PetRepository;
+import com.dao.jpa.VetRepository;
 import com.exception.OwnerNotFoundException;
+import com.exception.VetNotFoundException;
 import com.model.Owner;
+import com.model.Vet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -24,9 +27,16 @@ public class PetClinicServiceImpl implements PetClinicService {
     @Autowired
     private JavaMailSender javaMailSender;
 
+    private VetRepository vetRepository;
+
     @Autowired
     public void setOwnerRepository(OwnerRepository ownerRepository) {
         this.ownerRepository = ownerRepository;
+    }
+
+    @Autowired
+    public void setVetRepository(VetRepository vetRepository) {
+        this.vetRepository = vetRepository;
     }
 
     @Autowired
@@ -79,5 +89,15 @@ public class PetClinicServiceImpl implements PetClinicService {
         petRepository.deleteByOwnerId(id);
         ownerRepository.delete(id);
         //if(true) throw new RuntimeException("testing rolback");
+    }
+
+    @Override
+    public List<Vet> findVets() {
+        return vetRepository.findAll();
+    }
+
+    @Override
+    public Vet findVet(long id) throws VetNotFoundException {
+        return vetRepository.findById(id).orElseThrow(()->{return new VetNotFoundException("Vet not found by id : "+id);});
     }
 }

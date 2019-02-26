@@ -9,6 +9,15 @@ create table authorities (
 
 create unique index idx_auth_username on authorities (username,authority);
 
+CREATE TABLE PUBLIC.T_VET(
+    ID BIGINT NOT NULL,
+    FIRST_NAME VARCHAR(255) not null,
+    LAST_NAME VARCHAR(255) not null
+);
+
+ALTER TABLE PUBLIC.T_VET ADD CONSTRAINT PUBLIC.CONSTRAINT_11 PRIMARY KEY(ID);
+
+
 CREATE TABLE PUBLIC.T_OWNER(
     ID BIGINT NOT NULL,
     FIRST_NAME VARCHAR(255) not null,
