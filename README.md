@@ -6,6 +6,7 @@
 - Spring MVC
 - Spring Security
 - Spring Data JPA
+- Spring Boot Mail
 - H2 Embedded Database
 - Thymeleaf
 - Spring Boot Hateoas
