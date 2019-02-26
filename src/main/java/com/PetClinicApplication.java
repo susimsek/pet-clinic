@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 //@ServletComponentScan
 //Servlet tanımlarını göstermek için kullanılır
 
-@EnableJpaAuditing
+@EnableJpaAuditing(auditorAwareRef = "petClinicAuditorAware")
 @SpringBootApplication
 @EnableConfigurationProperties(value = PetClinicProperties.class)
 public class PetClinicApplication {

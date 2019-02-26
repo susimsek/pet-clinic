@@ -11,6 +11,7 @@
 - Spring Boot Mail
 - H2 Embedded Database
 - Thymeleaf
+- Jsp
 - Spring Boot Hateoas
 - Maven
 - Spring Boot Test(Junit,Mockito,Hamcrest)
