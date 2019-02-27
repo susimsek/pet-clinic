@@ -1,6 +1,6 @@
 # Pet Clinic #
 
-![Spring Boot Pet Clinic Api](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=&url=https%3A%2F%2Fwww.azilen.com%2Fblog%2Feverything-must-know-spring-boot-application-scratch%2F&psig=AOvVaw2bCupke_ag7kw_blTdg-80&ust=1551350786658980 "Spring Boot Pet Clinic Api")
+![Spring Boot Pet Clinic Api](https://www.azilen.com/blog/wp-content/uploads/2016/04/everything-must-know-spring-boot-application-scratch_12.jpg "Spring Boot Pet Clinic Api")
 
 # Technologies Used
 - Java 8
